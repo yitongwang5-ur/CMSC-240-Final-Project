@@ -1,0 +1,232 @@
+/* UR Dining Dollars — color palette mirrors matplotlib's tab:* set
+   so charts and chrome read as a single program. */
+
+QWidget {
+    background-color: #f7f7f7;
+    color: #1a1a1a;
+    font-family: -apple-system, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 11pt;
+}
+
+QMainWindow, QDialog {
+    background-color: #f7f7f7;
+}
+
+#TitleBar {
+    background-color: #990000;
+    color: #ffffff;
+    border: none;
+}
+
+#TitleBarLabel {
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: 600;
+    padding: 12px 16px;
+    background-color: transparent;
+}
+
+#TitleBarSubtitle {
+    color: #f4d8d8;
+    font-size: 10pt;
+    padding: 0px 16px 10px 16px;
+    background-color: transparent;
+}
+
+QFrame#Card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+QLabel#CardTitle {
+    color: #6b6b6b;
+    font-size: 10pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+QLabel#CardValue {
+    color: #1a1a1a;
+    font-size: 22pt;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#CardSubtext {
+    color: #6b6b6b;
+    font-size: 10pt;
+    background: transparent;
+}
+
+QLabel#HeaderBalance {
+    font-size: 22pt;
+    font-weight: 600;
+    color: #ffffff;
+    background: transparent;
+}
+
+QLabel#HeaderBalanceLabel {
+    font-size: 10pt;
+    color: #f4d8d8;
+    background: transparent;
+}
+
+QFrame#StatusBanner {
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+}
+
+QLabel#StatusIcon {
+    font-size: 22pt;
+    background: transparent;
+}
+
+QLabel#StatusTitle {
+    font-size: 14pt;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#StatusDetail {
+    font-size: 11pt;
+    background: transparent;
+}
+
+QTabWidget::pane {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    top: -1px;
+}
+
+QTabBar::tab {
+    background-color: #ececec;
+    color: #4a4a4a;
+    padding: 8px 18px;
+    border: 1px solid #dcdcdc;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #ffffff;
+    color: #1f77b4;
+    font-weight: 600;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #f0f0f0;
+}
+
+QTableView {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    gridline-color: #ececec;
+    selection-background-color: #d6e6f5;
+    selection-color: #1a1a1a;
+    alternate-background-color: #fafafa;
+}
+
+QHeaderView::section {
+    background-color: #f0f0f0;
+    color: #4a4a4a;
+    padding: 6px 10px;
+    border: none;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    font-weight: 600;
+}
+
+QPushButton {
+    background-color: #1f77b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #1a6396;
+}
+
+QPushButton:pressed {
+    background-color: #155078;
+}
+
+QPushButton:disabled {
+    background-color: #b8b8b8;
+    color: #ececec;
+}
+
+QPushButton#SecondaryButton {
+    background-color: #ffffff;
+    color: #1f77b4;
+    border: 1px solid #1f77b4;
+}
+
+QPushButton#SecondaryButton:hover {
+    background-color: #eaf2fa;
+}
+
+QProgressBar {
+    background-color: rgba(255, 255, 255, 60);
+    border: none;
+    border-radius: 4px;
+    height: 8px;
+    text-align: center;
+    color: transparent;
+}
+
+QProgressBar::chunk {
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+QListWidget {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+QListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+QListWidget::item:last-child {
+    border-bottom: none;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #c8c8c8;
+    border-radius: 5px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #a8a8a8;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QStatusBar {
+    background-color: #ececec;
+    color: #6b6b6b;
+    border-top: 1px solid #dcdcdc;
+}
