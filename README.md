@@ -15,6 +15,10 @@ notification and recommendations.
 - CMake 3.14+ and a C++17 compiler (install via `brew install cmake`)
 - QT 6
 
+## Prepare
+When first time running the program in IDE, a window will pop up on the top of your IDE. Chooese Clang 17.0.0 arm64-apple-darwin25.2.0 if on mac. 
+Then open a new terminal.
+
 ## Setup (one time)
 
 ```
