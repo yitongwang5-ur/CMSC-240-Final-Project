@@ -1,12 +1,19 @@
 # 240_final_project
 
-Scrapes University of Richmond One Card spending history, processes it with C++,
-and visualizes balance and daily spending over time.
+Scrapes University of Richmond One Card spending history, processes it with C++, and visualizes balance and daily spending over time.
+The program determines users' dinning dollar spending status and provide
+notification and recommendations. 
+
+## Team Member
+- Yushiro Murakami
+- Tony Wang
+
 
 ## Requirements
 
 - Python 3 + `make`
 - CMake 3.14+ and a C++17 compiler (install via `brew install cmake`)
+- QT 6
 
 ## Setup (one time)
 
@@ -23,30 +30,19 @@ installs the Playwright Chromium browser, and compiles the C++ analyzer.
 make run
 ```
 
-Steps in order:
-1. **Scrape** — launches Chromium, logs in to `onecardweb.richmond.edu`, and writes `jsons/rawHistory.json`
-2. **Analyze** — C++ binary parses the JSON and writes `jsons/history.json`
-3. **Visualize** — Python reads the processed data and saves PNGs to `python/visualizing/`
-
-## Individual steps
-
-```
-make scrape    # step 1 only
-make analyze   # step 2 only
-make viz       # step 3 only
-```
-
 ## Desktop UI (Qt 6)
 
-A native dashboard built on Qt 6 + QtCharts surfaces the same data as the
-matplotlib step, plus a sortable transaction table, color-coded pace banner,
-per-shop recommendations, and native system-tray notifications when your
-spending pace drifts.
+After installing QT:
 
-### Install Qt 6 (one-time, per machine)
+```
+make ui
+```
 
-The dashboard depends on **Qt 6** with the **Qt Charts** module. Install it
-once on each machine that will build the app:
+A  dashboard built on Qt 6 + QtCharts surfaces
+
+### Install Qt 6 (one-time)
+
+The dashboard depends on **Qt 6** with the **Qt Charts** module.
 
 #### macOS
 
@@ -55,7 +51,7 @@ brew install qt
 ```
 
 If you don't have Homebrew, install it from <https://brew.sh> first. The
-build picks up `brew --prefix qt` automaticallys
+build picks up `brew --prefix qt` automatically
 
 #### Windows
 
@@ -83,21 +79,6 @@ ui\build\Release\dining_ui.exe
 (`make ui` works on Windows too if you run it inside Git Bash, MSYS2, or
 WSL.)
 
-### Build and launch
-
-Once Qt is installed:
-
-```
-make ui                  # builds + launches the dashboard
-```
-
-The build is wired into the root `CMakeLists.txt`, so the project also opens
-directly in VSCode (with the **CMake Tools** extension): `Cmd+Shift+P → CMake:
-Configure → Build → Run` (or `F5` to debug).
-
-The UI reads `jsons/history.json` and `jsons/status.json` produced by the
-existing pipeline. Run `make run` first so those files exist; then `make ui`.
-
 ### Notifications
 
 The dashboard installs a small `$` icon in your menu bar (macOS) or system
@@ -105,6 +86,22 @@ tray (Windows). It re-checks `status.json` every 5 minutes and fires a native
 banner notification when your pace classification changes (on track →
 overspending, etc.). On first launch, allow notifications when the OS prompts
 you — otherwise alerts will only appear in-window.
+
+## Exmple Usage and Screenshots
+
+<img src="screenshots/exp1.png" alt="1" width="500">
+
+<img src="screenshots/exp2.png" alt="1" width="500">
+
+<img src="screenshots/exp3.png" alt="1" width="500">
+
+<img src="screenshots/exp4.png" alt="1" width="500">
+
+<img src="screenshots/exp5.png" alt="1" width="500">
+
+<img src="screenshots/exp6.png" alt="1" width="500">
+
+<img src="screenshots/exp7.png" alt="1" width="500">
 
 ## Clean up generated files
 
