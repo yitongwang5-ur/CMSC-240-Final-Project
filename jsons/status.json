@@ -1,0 +1,17 @@
+{
+  "beginning_balance": 883.02,
+  "classification": "on_track",
+  "days_elapsed": 106,
+  "days_total": 111,
+  "deviation_ratio": -0.044444832139335075,
+  "ending_balance": 0.53,
+  "expected_balance": 39.77567567567566,
+  "expected_spent": 843.2443243243243,
+  "recommended_daily_usage": 0.10600000000000001,
+  "recommended_weekly_usage": 0.7420000000000001,
+  "semester_end": "2026-05-03",
+  "semester_start": "2026-01-12",
+  "spent": 882.49,
+  "today": "2026-04-28",
+  "tolerance": 0.1
+}

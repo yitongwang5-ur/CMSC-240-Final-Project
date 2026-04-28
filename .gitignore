@@ -10,8 +10,4 @@ cmake-build*/
 # macOS
 .DS_Store
 
-# Generated pipeline JSON (directory kept via .gitkeep)
-jsons/*.json
-!jsons/.gitkeep
-
-results/*.png
+.vscode
