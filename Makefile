@@ -9,7 +9,7 @@ all: run
 # ── Setup ──────────────────────────────────────────────────────────────────
 
 setup: setup-python setup-cpp
-	@echo "Setup complete. Run 'make run' to start the pipeline."
+	@echo "Setup complete. Run 'make run' to run the pipeline and open the UI."
 
 setup-python: python/.venv/bin/python
 python/.venv/bin/python:
@@ -37,8 +37,6 @@ analyze: setup-cpp
 viz: setup-python
 	$(PYTHON) python/visualizing/vizualize.py
 
-run: scrape analyze viz
-
 # ── Qt UI ──────────────────────────────────────────────────────────────────
 
 UNAME_S := $(shell uname -s)
@@ -49,6 +47,9 @@ else
   UI_BIN := $(BUILD_UI)/dining_ui
   UI_LAUNCH := $(UI_BIN)
 endif
+
+run: scrape analyze viz setup-ui
+	$(UI_LAUNCH)
 
 setup-ui: $(UI_BIN)
 $(UI_BIN): ui/CMakeLists.txt $(wildcard ui/*.cpp) $(wildcard ui/*.h) ui/styles.qss ui/resources.qrc

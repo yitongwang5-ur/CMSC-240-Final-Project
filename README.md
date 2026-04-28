@@ -99,7 +99,6 @@ make setup
 make run
 Enter Net ID: ywang5
 Enter Password: abc123
-make ui
 Program window opens up
 
 <img src="screenshots/exp1.png" alt="1" width="500">
@@ -130,3 +129,24 @@ AI model used:
 - Claude 4.7 for implementing UI
 
 AT conversation included in ZIP in repository
+
+## User Feedback
+
+### Prototype
+
+- Yushiro: “This visualization is cool, but I do not get much information from it. It needs more functionalities to be useful.”
+
+- Ririho: “It is interesting to see the graph, which reminds me of the memory when I used a lot of dining dollars. But it is tough to do this setup for me, so can you make it simpler?”
+
+- Daniel: “I need functionalities like telling how many dollars I can use every week, considering I buy some souvenirs at the end of the semester.“
+
+- Kiet: “I knew I'd spent 220 dining dollars within two weeks. I have only 30 dollars. I want the functionality so that any user can donate to me.“
+
+### Final Product
+
+| | Scraping | Analyzing | Pace | Recommendations | Notifications | Ease of Use |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Yushiro** | 4 | 4 | 4 | 4 | 4 | 5 |
+| **Daniel** | 4 | 4 | 4 | 3 | 3 | 5 |
+| **Ririho** | 4 | 4 | 4 | 3 | 3 | 4 |
+| **Kiet** | 4 | 4 | 4 | 3 | 3 | 5 |
