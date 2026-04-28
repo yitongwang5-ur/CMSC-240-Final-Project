@@ -87,7 +87,16 @@ banner notification when your pace classification changes (on track →
 overspending, etc.). On first launch, allow notifications when the OS prompts
 you — otherwise alerts will only appear in-window.
 
+
+
 ## Exmple Usage and Screenshots
+
+make setup
+make run
+Enter Net ID: ywang5
+Enter Password: abc123
+make ui
+Program window opens up
 
 <img src="screenshots/exp1.png" alt="1" width="500">
 
@@ -109,3 +118,11 @@ you — otherwise alerts will only appear in-window.
 make clean
 rm -rf .claude build ui/build analyzing/build python/.venv ~/Library/Caches/ms-playwright
 ```
+
+## AI Usage
+
+AI model used: 
+- GPT 5.5 for syntax check
+- Claude 4.7 for implementing UI
+
+AT conversation included in ZIP in repository
