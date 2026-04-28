@@ -39,8 +39,11 @@ async def main():
         
         await browser.close()
         
-    path = os.path.join(os.path.dirname(__file__), "..", "..", "jsons", "rawHistory.json")
-        
+    path = os.path.normpath(
+        os.path.join(os.path.dirname(__file__), "..", "..", "jsons", "rawHistory.json")
+    )
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(
             {

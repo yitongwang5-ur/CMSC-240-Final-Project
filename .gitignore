@@ -1,0 +1,17 @@
+# CMake out-of-tree builds
+build/
+**/build/
+cmake-build*/
+
+# clangd / tooling caches
+.cache/
+**/.cache/
+
+# macOS
+.DS_Store
+
+# Generated pipeline JSON (directory kept via .gitkeep)
+jsons/*.json
+!jsons/.gitkeep
+
+results/*.png
